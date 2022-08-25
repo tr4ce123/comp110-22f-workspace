@@ -37,8 +37,11 @@ if single_character_input == five_character_word_4:
 
 number_of_matching_characters: int = five_character_word.count(single_character_input)
 
-if number_of_matching_characters >= 1:
+if number_of_matching_characters > 1:
     print(str(number_of_matching_characters) + " instances of " + single_character_input + " found in " + five_character_word)
+
+if number_of_matching_characters == 1:
+    print(str(number_of_matching_characters) + " instance of " + single_character_input + " found in " + five_character_word)
 
 if number_of_matching_characters < 1:
     print("No instances of " + single_character_input + " found in " + five_character_word)
