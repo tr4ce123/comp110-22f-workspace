@@ -20,22 +20,27 @@ word_index_2 = five_character_word[2]
 word_index_3 = five_character_word[3]
 word_index_4 = five_character_word[4]
 
+number_of_matching_characters: int = 0
+
 if single_character_input == word_index_0:
     print(single_character_input + " found at index 0")
+    number_of_matching_characters += 1
 
 if single_character_input == word_index_1:
     print(single_character_input + " found at index 1")
+    number_of_matching_characters += 1
 
 if single_character_input == word_index_2:
     print(single_character_input + " found at index 2")
+    number_of_matching_characters += 1 
 
 if single_character_input == word_index_3:
     print(single_character_input + " found at index 3")
+    number_of_matching_characters += 1
 
 if single_character_input == word_index_4:
     print(single_character_input + " found at index 4")
-
-number_of_matching_characters: int = five_character_word.count(single_character_input)
+    number_of_matching_characters += 1
 
 if number_of_matching_characters > 1:
     print(str(number_of_matching_characters) + " instances of " + single_character_input + " found in " + five_character_word)
