@@ -14,25 +14,25 @@ if len(single_character_input) != int(1):
 
 print("Searching for " + single_character_input + " in " + five_character_word) 
 
-five_character_word_0 = five_character_word[0]
-five_character_word_1 = five_character_word[1]
-five_character_word_2 = five_character_word[2]
-five_character_word_3 = five_character_word[3]
-five_character_word_4 = five_character_word[4]
+word_index_0 = five_character_word[0]
+word_index_1 = five_character_word[1]
+word_index_2 = five_character_word[2]
+word_index_3 = five_character_word[3]
+word_index_4 = five_character_word[4]
 
-if single_character_input == five_character_word_0:
+if single_character_input == word_index_0:
     print(single_character_input + " found at index 0")
 
-if single_character_input == five_character_word_1:
+if single_character_input == word_index_1:
     print(single_character_input + " found at index 1")
 
-if single_character_input == five_character_word_2:
+if single_character_input == word_index_2:
     print(single_character_input + " found at index 2")
 
-if single_character_input == five_character_word_3:
+if single_character_input == word_index_3:
     print(single_character_input + " found at index 3")
 
-if single_character_input == five_character_word_4:
+if single_character_input == word_index_4:
     print(single_character_input + " found at index 4")
 
 number_of_matching_characters: int = five_character_word.count(single_character_input)
