@@ -7,7 +7,7 @@ WHITE_BOX: str = "\U00002B1C"
 GREEN_BOX: str = "\U0001F7E9"
 YELLOW_BOX: str = "\U0001F7E8"
 
-player_guess: str = input("What is your 6-letter guess? ")
+player_guess: str = input(f"What is your {len(SECRET)}-letter guess? ")
 i: int = 0
 boxes: str = ""
 match_in_wrong_place: bool = False 
@@ -22,6 +22,7 @@ while i < len(SECRET):
     else:
         match_in_wrong_place: bool = False
         alternate_indices: int = 0
+
         while match_in_wrong_place == False and alternate_indices < len(SECRET):
             if player_guess[i] == SECRET[alternate_indices]:
                 match_in_wrong_place = True 
