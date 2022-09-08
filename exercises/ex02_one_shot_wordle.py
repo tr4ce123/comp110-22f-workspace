@@ -1,4 +1,4 @@
-"""EX 02 - One Shot Wordle - the next step in completing a wordle bot"""
+"""EX 02 - One Shot Wordle - the next step in completing a wordle bot."""
 
 __author__ = "730567386"
 
@@ -10,8 +10,6 @@ YELLOW_BOX: str = "\U0001F7E8"
 player_guess: str = input(f"What is your {len(SECRET)}-letter guess? ")
 i: int = 0
 boxes: str = ""
-match_in_wrong_place: bool = False 
-alternate_indices: int = 0
 
 while len(player_guess) != len(SECRET):
     player_guess = input("That was not 6 letters! Try again: ")
@@ -23,14 +21,13 @@ while i < len(SECRET):
         match_in_wrong_place: bool = False
         alternate_indices: int = 0
 
-        while match_in_wrong_place == False and alternate_indices < len(SECRET):
+        while not match_in_wrong_place and alternate_indices < len(SECRET):
             if player_guess[i] == SECRET[alternate_indices]:
                 match_in_wrong_place = True 
             else:
                 alternate_indices += 1 
                 
-        
-        if match_in_wrong_place == False: 
+        if not match_in_wrong_place: 
             boxes = boxes + WHITE_BOX
         else: 
             boxes = boxes + YELLOW_BOX
@@ -39,12 +36,10 @@ while i < len(SECRET):
         
     i += 1
 
-
-
 if player_guess != SECRET:
     print(boxes)
-    exit(print("Not quite! Play again soon!"))
+    print("Not quite! Play again soon!")
 else:
     (print(boxes))
-    exit(print("Woo! You got it!"))
-    
+    print("Woo! You got it!")
+
