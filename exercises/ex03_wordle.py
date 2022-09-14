@@ -3,7 +3,7 @@
 __author__ = "730567386"
 
 
-def contains_char(word_being_searched: str, single_character: str) -> str:
+def contains_char(word_being_searched: str, single_character: str) -> bool:
     """Shows whether the single character is present in the word being searched or not."""
 
     assert len(single_character) == 1
@@ -40,10 +40,4 @@ def emojified(player_guess: str, secret_word: str) -> str:
         i += 1
     
     return boxes
-    
-    
-        
-    
-        
-
     
