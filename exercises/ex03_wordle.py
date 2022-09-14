@@ -32,17 +32,14 @@ def emojified(player_guess: str, secret_word: str) -> str:
     while i < len(player_guess):
         if player_guess[i] == secret_word[i]:
             boxes = boxes + GREEN_BOX
-        else:
-            contains_char(secret_word, player_guess[i])
-            
-            if contains_char(secret_word, player_guess[i]) == True:
+        elif contains_char(secret_word, player_guess[i]) == True:
                 boxes = boxes + YELLOW_BOX
-            else: 
-                boxes = boxes + WHITE_BOX
+        else: 
+            boxes = boxes + WHITE_BOX
         
         i += 1
     
-    print(boxes)
+    return boxes
     
     
         
