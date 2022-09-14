@@ -40,4 +40,14 @@ def emojified(player_guess: str, secret_word: str) -> str:
         i += 1
     
     return boxes
+
+
+def input_guess(expected_length: int) -> str:
+    """Repeats prompt until the length of the input matches the expected length of the secret word."""
+
+    player_guess = input(f"Enter a {expected_length} character word: ")
+
+    while expected_length != len(player_guess):
+        player_guess = input(f"That wasn't {expected_length} chars! Try again: ")
     
+    return player_guess
