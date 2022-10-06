@@ -5,6 +5,10 @@ __author__ = "730567386"
 points: int = 0
 player: str = ""
 
+MELTING_FACE = "\U0001FAE0"
+CELEBRATION_FACE = "\U0001F973"
+SAD_FACE = "\U0001F97A"
+
 
 def greet() -> None:
     """Asks the player to enter a name and greets them."""
@@ -40,10 +44,10 @@ def game() -> None:
 
         if player_response == answer:
             points += 1
-            print(f"Great job! Score = {points}")
+            print(f"Great job! {CELEBRATION_FACE} Score = {points}")
         else: 
             print("")
-            print(f"I'm sorry {player}, that's incorrect. Game over.")
+            print(f"I'm sorry {player}, that's incorrect. Game over. {MELTING_FACE} {SAD_FACE}")
             print(f"{player}'s points earned: {points}")
             print(f"{player}'s EXP earned: {exp(points)}")
             print("")
