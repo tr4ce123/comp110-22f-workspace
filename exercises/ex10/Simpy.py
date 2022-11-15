@@ -122,4 +122,3 @@ class Simpy:
                     result_Simpy.values.append(self.values[i])
             return result_Simpy
                 
-        
